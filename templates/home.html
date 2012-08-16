@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Home{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+        
+    <ul id="menu">
+        <li ><a href="{% url home %}" title="" class="current">acceuil</a></li>
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="">organisation</a></li>
+    </ul>
+ 
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+    
+    <div id = "home_page">
+        <div class="span-12 append-6 prepend-6">
+            <div id="central" class="span-12 box">
+                    <p id="invite">{% trans "Choose a topic to start" %} <br>
+                <ul>
+                    <li>
+                        <a  href="{% url dashboard %} "class="button">Consulter factures</a>
+                    </li>
+                    <li>
+                        <a href="{% url add_invoice %}" class="button" >Créer facture</a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+ {% endblock %}

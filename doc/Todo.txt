@@ -1,0 +1,17 @@
+TODO: cette vue est séparée de la première, pourquoi ?
+    # - l'utilisateur ne voit pas tout regroupé
+    # - la taxe se fait pour tous les items? Vous êtes sur que tous les biens
+    # on une taxation unique ? Confirmé par le comptable?
+    # Sur vos schéma C'est en deux pages ? Où sont les schémas ? je ne les vois
+    # pas sur le dépot
+    # en plus c'est dangereux, si vous avez un utilisateur qui abandonne 
+    # une facture puis reprend le processus plus tard, vous avez une facture
+    # orpheline sans item
+    # mettez tout sur la même page et user_invoice sera retourné par la méthode
+    # save() du premier formulaire
+
+    # vérifier si il existe plusieurs taxes, et si oui, permettre
+    # d'en mettre plusieurs. Sinon, mettre une taxe fixe et ne pas demander
+    # de la saisir
+    
+    # TODO: mettre par defaut la date du jour + un helper JS + format data visible

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Modification de l'organisation{% endblock %}
+{% block page-id %}Add-organization{% endblock %}
+{% block content %}
+    <ul id="menu">
+        <li ><a href="#" title="">les abonnés</a></li>
+        <li ><a href="{% url add_owner%}" title="">Ajouter utilisateur</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div >
+    <div id = "choose_logo_page">
+
+        <div id = "ajout">
+            <h1>Ajouter un nouveau logo</h1>
+            <form  method="post" action="" enctype="multipart/form-data"> {% csrf_token %}
+                <div id = "label_extra" >
+                    {{form.name}} 
+                   <p id = 'organization_validate_boutton' class= "{{save}}">
+                    <input type='submit' name = 'valider' value =  "Ajouter"/></p>
+                </div>
+            </form>
+        </div>
+
+        <div id = "choix">              
+
+            {% if page.object_list %}
+                <h1>Choix du logo de l'entreprise</h1>
+            <div id="pagination" >
+                <span>{% include "_logo_pagination.html" %}</span>
+            </div>
+                <table>
+                    <th><strong>Logo {{ page.number }}</strong></th>
+                    <th>Valider</th>
+                    {% for image in page.object_list %}
+                        <tr>
+                            <td><img src="/static/{{image.name}}" width="200" height ="200"></td>
+                            <td><a href="{{image.url}}"><img src="/static/css/images/valide.gif" width="20" height="20" /</a></td></a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {%endif%}
+        </div>
+    </div>
+
+{% endblock %}
+

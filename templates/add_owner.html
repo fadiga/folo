@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Administration du site{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+
+    <ul id="menu">
+        <li ><a href="{% url owner%}" title="">les abonnés</a></li>
+        <li ><a href="{% url add_owner%}" title="" class="current">Ajouter utilisateur</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+    
+    <div id = "add_owner_page">
+        <h1>Création d'un Utilisateur</h1>  
+           
+                <form action="" method="post" >{% csrf_token %}
+
+                    <div id="create_user_form">
+                    
+                        <div id= "username_div">
+                            {{form.username.label}}:
+                            {{form.username}}
+                        </div>
+                        
+                        <div id= "password_div">
+                            {{form.password.label}}:
+                            {{form.password}}
+                        </div>
+                        
+                        <div id= "password_confirmation_div">
+                            {{form.password_confirmation.label}}:
+                            {{form.password_confirmation}}
+                        </div>
+                        
+                        <div id= "first_name_div">
+                            {{form.first_name.label}}:
+                            {{form.first_name}}
+                        </div>
+                        
+                        <div id= "last_name_div">
+                            {{form.last_name.label}}:
+                            {{form.last_name}}
+                        </div>
+                        
+                        <div id= "email_div">
+                            {{form.email.label}}:
+                            {{form.email}}
+                        </div>
+                        
+                        <p id = 'add_owner_validator' class= "{{save}}">
+                        <input type='submit' value =  "Ajouter"/></p>
+                    </div>
+                </form>
+    </div>
+    <script type="text/javascript">
+       // var mdp1=$('#id_password').attr("value");
+       // var mdp2=$('#id_password_confirmation').attr("value");
+        //var t=(mdp2 === mdp1);
+          //  if(t === true)
+            // console.log(true);
+            //else
+              //  console.log(false);
+             
+        var validator = $('form').validate({
+            rules: {
+                username: "required",
+                password: "required",
+                password_confirmation: "required",
+                last_name: "required",
+                first_name: "required",
+                groupe: "required",
+            },
+            messages: {
+               username: "Tapez un nom d'utilisateur",
+                password: "Veuilez taper un mot de passe ",
+                password_confirmation: "Confirmer le mot  de passe",
+                last_name: "Le prénom",
+                first_name: "Le nom",
+                groupe: "Veuillez choisir un groupe",
+            }
+        });
+    </script>
+{% endblock %}

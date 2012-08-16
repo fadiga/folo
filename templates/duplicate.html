@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Duplicate{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="" class="current">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="">organisation</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+
+    <div id= "invoice_item_page">
+
+        <form action="" method="post" id="invoice_form">{% csrf_token %}
+            {{ formset.management_form }}
+            <h2> {{organization}}</h2>
+            <div id ='invoice_form'>
+                    {% for field in form %}
+                        <div class="lis" id="{{ field.name }}_div">
+                            {{ field.label }}: {{ field }}</br>
+                        </div>
+                    {% endfor %}
+                    <div id="facture_div" class="lis">
+                        <label for="id_type"></label>
+                    <select name="type" id="id_type">
+                        <option value="1">Facture</option>
+                        <option value="2">Proforma</option>
+                    </select>
+                    <b>N°</b>
+
+                    </div>
+
+            </div>
+            <div id = 'invoice_items'>
+                <table>
+                    {% if error %}
+                        <tr><td colspan="3">{{error}}</td></tr>
+                    {% endif %}
+                    <tr>
+                        <th>description</th>
+                        <th>Quantity</th>
+                        <th>P.U.</th>
+                        <th>Montat</th>
+                    </tr>
+                    <span id='warning'>
+                        {% for field in formset.forms %}
+                             <tr id="yes">
+                                 <td>{{ field.description }}</td>
+                                 <td>{{ field.quantity }}</td>
+                                 <td>{{ field.price }}</td>
+                                 <td class="montat"></td>
+                             </tr>
+                        {% endfor %}
+                    </span>
+                </table>
+                <input type='submit' value =  "Créer"/></p>
+            </div>
+            <script type="text/javascript">
+               $('#id_date').datepicker({ dateFormat: 'dd/mm/yy',
+                                          showButtonPanel: true,
+                                          closeText: 'X'
+                                        });
+
+               //(1) trouve le checkbox et creer une variable
+               var taxRateDiv = $('#id_tax_rate');
+              //(2) créer une fonction qui test si checkbox est coché
+                //    si le checkbox est coché, afficher le champs taux
+                //    si non, cache le
+                function test(){
+                    if ($("#id_tax").is(':checked')){
+                        taxRateDiv.parent().show();
+                        }
+                    else{
+                        taxRateDiv.parent().hide();
+                        }
+                }
+
+                //(3) Quand le page loads, appele notre fonction
+                test()
+
+                //(4) Quand le checkbox est coché appelé notre fonction
+                $("#id_tax").click(function(){
+                    test()
+                });
+                $('tr td:nth-child(3) input').blur(function(){
+                    // ici, "this" == "<input>"
+                    var thisRow = $(this).parents()[1];
+
+                    var inputsInThisRow = $(thisRow).find('input');
+
+                    var value1 = Number($(inputsInThisRow[1]).val());
+                    var value2 = Number($(inputsInThisRow[2]).val());
+
+                    var montat = value1*value2
+                    var montatTd = $(thisRow).find('td').get(3);
+
+                    if(!isNaN(montat)){
+                        $(montatTd).text(montat);
+                    }
+                })
+                var validator = $('form').validate({
+                    // debug: true, Seulement avec "firebug"
+                    rules: {
+                        date: "required",
+                        number: {
+                            required: true
+                            },
+                        location: "required",
+                        client: "required",
+                        client_address: "required"
+                    },
+                    messages: {
+                        date: "Specify a date",
+                        number: "Number required",
+                        location: "Location required",
+                        client: "Client",
+                        client_address: "L'address"
+                    }
+                });
+
+     ///           $(document).ready(function(){
+     ///                var max = 0;
+
+     ///                    $('label').each(
+     ///                        function(){
+     ///                        if($(this).width() > max) max = $(this).width();
+     ///                    })
+
+     ///                    $('label').width(max);
+     ///                    $('#invoice_form input[type=text][id=id_location],[id=id_subject],[id=id_tax_rate]').css({left : "-"+(max+5)+"px"}); //on place les input sous le label
+     ///                    $('input[type=text][id=id_location],[id=id_subject],[id=id_tax_rate]').focusin(function(){
+     ///                        $(this).animate({left: 5},{duration: 200, queue: false});
+     ///                        $(this).prev('label').animate({opacity: 1},{duration: 200, queue: false});
+     ///                    });
+
+     ///                    $('input[type=text][id=id_location],[id=id_subject],[id=id_tax_rate]').focusout(function(){
+         ///                    if($(this).val() == ""){ //on vérifie que l'input soit bien vide
+         ///                        $(this).animate({left: "-"+(max+5)+"px"},{duration: 200, queue: false});
+     ///                            $(this).prev('label').animate({opacity: 0.4},{duration: 200, queue: false});
+     ///                        }
+     ///                    });
+     ///            });
+
+
+                </script>
+            </form>
+        <center><br>Situé à: {{organization.address}}</br> {{organization.address_extra}} {{organization.address_extra2}} {{organization.legal_infos}}</center>
+
+</div>
+
+{% endblock %}

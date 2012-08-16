@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Delete{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+   <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="">organisation</a></li>
+    </ul>
+    
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+    <div id = "delete_confirm_page">
+        <h1>Confirmer la suppression?</h1>
+        <div id = "decalage">
+            <table>
+                <th>Numero de la Facture</th>
+                <th> client</th>
+                <th> Objet de la Facture</th>
+                <tr>
+                    <td>{{invoice.number}}</td>
+                    <td> {{invoice.client}}</td>
+                    <td>{{invoice.subject}}</td>
+                </tr>
+            </table>
+        </div>
+        <div id="confirm">
+        <a href= '{{url}}' class = "button">confirmer</a>
+        <a href ='{% url dashboard %}' class = "button">Annuler</a></div>
+        </div>
+    </div>
+ {% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Administration du site{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+
+    <ul id="menu">
+         <li ><a href="{% url owner%}" title="" class="current">les abonnés</a></li>
+         <li ><a href="{% url add_owner%}" title="">Ajouter d'utilisateur</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+    
+    <div id = "owner_page">
+        <center><h1>Liste des Utilisateurs</h1></center>
+        <div id= "list_owner">
+            <a  href="{% url add_owner%}"><img src="/static/css/images/add_owner.png" onmouseover="this.src='/static/css/images/add_owner_over.png';" onmouseout="this.src='/static/css/images/add_owner.png';" width ='140' height='40'/></a>
+            <table id="click_table">
+                <tr>
+                    <th>Prenom</th>
+                    <th>Nom</th>
+                    <th>Status</th>
+                    <th>Modifier</th>
+                </tr>
+                {% for owner in owners %}
+                    <tr>
+                        <td>{{owner.first_name}}</a></td>
+                        <td>{{owner.last_name}}</a></td>
+                        <td>{{owner.is_active}}</td>
+                        <td><a class='table_link' href='{{owner.url}}'><img src="/static/css/images/modif.png "width="25" height ="20"></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+         </div>
+     </div>
+{% endblock %}

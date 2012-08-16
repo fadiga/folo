@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Modification de Vos contacts{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="" class="current">Vos contacts</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div >
+    <div id = "edit_organization_page">
+        <h1>Modification de Vos contacts</h1>
+        <form  method="post" action=""> {% csrf_token %}
+            <div id = "organization_page_error">
+                {{error}}
+                {{error1}}
+                {{erreur_organization_name}}
+                {{erreur_address}}
+            </div>
+
+           
+                    <div id = "label_name">
+                        {{form.name.label}}:
+                        {{form.name}}
+                    </div>
+
+                    <div id = "label_image">
+                        {{form.image.label}}:
+                        {{form.image}}
+                        <div id = "edit_logo_link">
+                        <input type='submit' name = 'add_logo' value =  "Choisissez un logo"/>
+                        </div>
+                    </div>
+
+                    <div id = "label_address">
+                        {{form.address.label}} <span class="example">ex: djicoronie para</span>:
+                        {{form.address}} 
+                       <p></p>
+                    </div>
+
+                    <div id = "label_extra" >
+                        {{form.address_extra.label}}:<span class="example"> ex: 31223344</span>
+                        {{form.address_extra}}
+                        
+                    </div>
+
+                    <div id = "label_extra2">
+                        {{form.address_extra2.label}}:<span class="example"> ex: exemple@yeleman.com</span>
+                        {{form.address_extra2}}
+                       
+                    </div>
+
+                    <div id = "label_legal_infos">
+                        {{form.legal_infos.label}}:
+                        {{form.legal_infos}}
+                    </div>
+                    <p id = 'organization_validate_boutton' class= "{{save}}">
+                    <input type='submit' name = 'valider' value =  "Enrégistrer"/></p>
+         
+        </form>
+    </div>
+ {% endblock %}
+

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Login{% endblock %}
+{% block page-id %}rapid-invoice{% endblock %}
+{% block content %}
+    <div id = "login_page">
+        <b>{{state}}</b>
+        <div id="logo_login">
+            <h1>
+                <a href="#">
+                    <span>Folo</span >FActure
+                </a>
+            </h1>
+        </div>
+        <ul id="menu">
+            <form action="{% url login %}" method="post">{% csrf_token %}
+                <div>{{ form.as_ul }}</div>
+                <span class ="span-4">        
+                    <input id = 'id_Connexion' type="submit" value="Se connecter" >
+                </span>
+            </form>
+        </ul>
+        <div id="info_site" class="span-12">
+            <br>
+            <h3>Facture Rapide</h3><p></p>
+            <p>Faites rapidement et éfficacement vos facture de toutes
+            sortes à un cout unique et tres bas.</p>
+            <p>L'abonnement se fait une fois l'an pour seulement</p>
+            <h5>500 fcfa</h5>
+
+            <p id='gras' >Vous n'avez pas encore de compte ?</p><br>
+            <p >Contactez Yeleman!!!</p>
+        </div>
+        <div id="central-column" >
+            <img  src="/static/css/images/dashboard.png">
+        </div>
+    </div>
+{% endblock %}

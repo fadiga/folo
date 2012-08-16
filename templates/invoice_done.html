@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Invoice-done{% endblock %}
+{% block page-id %}rapid-invoice{% endblock %}
+{% block content %}
+    {% load humanize %}
+    {% load  thousand_separator %}
+    <div id = "invoice_done_page">
+        <div><img src="/static/{{dict_header.logo}}" width="200" height="120"></div>
+        <div id = "org">
+            <strong>{{dict_header.organization}}</strong>
+        </div>
+        <hr>
+        <div id = "invoice_organization_name">
+            <strong> Date :</strong>{{dict_header.date}} à {{dict_header.location}}<br>
+
+        </div>
+        <div id="information">
+            <p>
+                <strong> {{dict_header.type}} N°:</strong>{{dict_header.number}}<br>
+                <strong>Doit : </strong>{{dict_header.client}}<br>
+            </p>
+        </div>
+        <table class="invoice-items">
+            <tr>                
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>P.U</th>
+                <th>Montant</th>
+            </tr>
+            
+            {% for i in lists %}
+                <tr>                
+                    <td id = "right">{{i.quantity|intcomma|thousand_separator:","}}</td>
+                    <td >{{i.description}}</td>
+                    <td id = "right">{{i.price|intcomma|thousand_separator:","}}</td>
+                    <td id = "right">{{i.montant|intcomma|thousand_separator:","}}</td>
+
+                </tr>
+            {% endfor %}
+            {%if tax%}
+                <tfoot >
+                    <TR VALIGN=TOP>
+                        <TD ROWSPAN=3 COLSPAN=2 WIDTH=61%></TD>
+                        <TD ><FONT SIZE=3>Total H.T</FONT></TD>
+                        <TD  id = "right">{{ht|intcomma|thousand_separator:","}}</TD>
+                    </TR>
+                    <TR VALIGN=TOP>
+                        <TD><FONT SIZE=3>T.V.A({{tax}}%)</FONT></TD>
+                        <TD  id = "right">{{tva}}</TD>
+                    </TR>
+                    <TR VALIGN=TOP>
+                        <TD><FONT SIZE=3>Total T.T.C</FONT></TD>
+                        <TD id = "right">{{ttc|intcomma|thousand_separator:","}}</TD>
+                    </TR>
+                </tfoot>
+            {%else%}
+            <tfoot >
+                <TR VALIGN=TOP>
+                    <TD ROWSPAN=3 COLSPAN=2 WIDTH=61%></TD>
+                    <TD ><FONT SIZE=3>Total</FONT></TD>
+                    <TD  id = "right">{{ht|intcomma|thousand_separator:","}}</TD>
+                </TR>
+            </tfoot>
+            {%endif%}
+        </table>
+        <div id="decalage">
+            <div id ="int_lettre">  
+                {{ht_en_lettre}}  FCFA
+            </div>
+            <h4> Arrêté la présente facture à la somme de :</h4> 
+           
+           
+            <div id ="sign"><h4>Le fourniseur</h4></div>  
+                <h4> {{type_}}</h4>
+            </div>
+            <div id = "pied_page">
+                <ul>
+                    <li>{{dict_header.organization.address}}-{{dict_header.organization.address_extra}}-{{dict_header.organization.address_extra2}}</li>
+                    <li>{{dict_header.organization.legal_infos}}</li>
+                </ul>
+            </div>
+            <div >
+                <a href="{% url dashboard %}" class = "button">Retour</a>
+                <a href="{{url}}"class = "button">PDF</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

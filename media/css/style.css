@@ -1,0 +1,1678 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* css de la page add owner */
+
+#add_owner_page form{
+margin-left: 300px;
+margin-top: 29px;
+}
+
+#add_owner_page h1 {
+margin-top: 10px;
+margin-left: 350px;
+}
+
+#add_owner_page #create_user_form #username_div input[id="id_username"]{
+margin-left: 50px;
+width: 180px;
+border-width: 3px;
+}
+
+#add_owner_page #create_user_form #password_div input[id="id_password"]{
+height: 17px;
+margin-left: 70px;
+width: 180px;border-width:3px;
+}
+
+#add_owner_page #create_user_form #password_confirmation_div input[id="id_password_confirmation"]{
+height: 17px;
+margin-left: -1px;
+width: 180px;border-width:3px;
+}
+
+#add_owner_page #create_user_form #first_name_div input[id="id_first_name"]{
+margin-left: 128px;
+width: 180px;border-width:3px;
+}
+
+#add_owner_page #create_user_form #last_name_div input[id="id_last_name"]{
+margin-left: 108px;
+width: 180px;border-width:3px;
+}
+
+#add_owner_page #create_user_form  input[id="id_email"]{
+margin-left: 124px;
+width: 180px;
+}
+
+#add_owner_page #erreur_saisie {
+color: #DB1B1B;
+margin-top:1em;
+margin-left: 0em;
+float:right;
+}
+
+#add_owner_page #add_owner_validator{
+margin-left: 220px;
+margin-top: 10px;
+}
+
+
+/* css de la page edit owner */
+
+#owner_edit_page form{
+margin-left: 300px;
+margin-top: 29px;
+}
+
+#owner_edit_page h1 {
+margin-top: 10px;
+margin-left: 253px;
+}
+
+#owner_edit_page #create_user_form #username_div input[id="id_username"]{
+margin-left: 50px;
+width: 180px;
+}
+
+#owner_edit_page #create_user_form #password_div input[id="id_password"]{
+height:18px;
+margin-left:70px;
+width:187px;
+}
+#owner_edit_page #create_user_form #password_confirmation_div input[id="id_password_confirmation"]{
+height:18px;
+margin-left:-1px;
+width:187px;
+}
+
+#owner_edit_page #create_user_form #first_name_div input[id="id_first_name"]{
+margin-left: 128px;
+width: 187px;
+height: 18px;
+}
+
+#owner_edit_page #create_user_form #last_name_div input[id="id_last_name"]{
+margin-left: 108px;
+width: 187px;
+}
+
+#owner_edit_page #create_user_form  input[id="id_email"]{
+margin-left: 124px;
+width: 187px;
+}
+#owner_edit_page #create_user_form #actif_div input[id="id_actif"]{
+margin-left: 133px;
+
+}
+#add_owner_page #erreur_saisie {
+color: #DB1B1B;
+margin-top:1em;
+margin-left: 0em;
+float:right;
+}
+
+#owner_edit_page #owner_edit_validator{
+margin-left: 215px;
+}
+
+
+/* css de la page invoiceitem.html */
+
+#invoice_item_page #invoice_form input[type="submit"]{
+ margin-top: 15px;
+ margin-right: 0px;
+ margin-left: 832px;
+}
+
+#invoice_item_page #invoice_form {
+float:left;
+}
+#invoice_item_page #invoice_items #error_table ul {
+            padding-left: 72px; 
+            border-bottom-width: 103px; 
+            padding-bottom: 0px; padding-top: 0px;
+            border-top-width: 36px; 
+            margin-top: -25px; margin-left: 155px;}
+#invoice_item_page #invoice_items #error_table {
+                                        text-align:left;
+                                        padding: 27px 194px 0px 0px; 
+                                        border-bottom-width: 0px; 
+                                        margin-bottom: -15px;
+                                        }
+
+/*
+#invoice_item_page #invoice_items table{
+width: 100%;
+*/
+}
+
+#invoice_item_page #invoice_form input[id="id_date"]{
+width: 100px;
+margin-left: 33px;
+}
+
+#invoice_item_page #invoice_form input[id="id_number"]{
+width: 100px;
+margin-left: 10px;
+}
+
+#invoice_item_page #invoice_form input[id="id_location"]{
+width: 100px;
+margin-left: 42px;
+margin-right: 0px;
+}
+
+#invoice_item_page #invoice_form input[id="id_subject"]{
+width: 50px;
+margin-left: -2px;
+padding-right: 115px;
+}
+
+#invoice_item_page #invoice_form select[id="id_type"]{
+width: 100px;
+margin-left: 18px;
+}
+
+#invoice_item_page #invoice_form input[id="id_tax"]{
+width: 100px;
+margin-left: 5px;
+}
+
+#invoice_item_page #invoice_form input[id="id_tax_rate"]{
+width: 40px;
+display: none;
+}
+
+#invoice_item_page #invoice_form li{
+color: #FF3000;
+margin-left:10px;
+list-style-type:none;
+margin-right:0
+}
+
+#invoice_item_page #invoice_error tr{
+font-family: Arial, Sans-Serif;
+font-size: 20px;
+}
+
+#invoice_item_page #invoice_error.sent {
+display : none;
+}
+
+#invoice_item_page #invoice_error {
+padding-top:8em;
+}
+
+#invoice_item_page #erreur_saisie {
+color: #F57076;
+font-size:18px
+}
+
+#invoice_item_page.send ul li{
+display : none;
+}
+
+/* Positionnement des elements de add invoice */
+
+#invoice_item_page div#invoice_form {
+    background-color: #FFFFFF;
+}
+
+/*-- pour testing  div#invoice_form div {border:1px solid #888;} --*/
+
+#invoice_item_page div#invoice_form {
+    position: relative;
+    width: 950px;
+    height: 160px;
+}
+
+#invoice_item_page div.lis {
+    padding: 0 0 0 21px;
+    width: 50%;
+    position: absolute;
+    top: 280px;
+}
+
+#invoice_item_page #invoice_type{
+width: 120px;
+margin-top: 15px;
+margin-left: 38px;
+}
+
+#invoice_item_page #message_erreur{
+margin-left: 350px;
+width: 240px;
+margin-top: -25px;
+}
+
+#invoice_item_page #client_div{
+    
+    top: 63px;
+    padding-left: 0px;
+    width: 139px; 
+    left: 17px;
+}
+
+#invoice_item_page #invoice_form #client_div select[id="id_client"]{
+width: 100px;
+}
+
+#invoice_item_page #location_div {
+top: 46px;
+left: 807px; 
+width: 313px;
+padding-left: 0px; 
+width: 143px; 
+
+}
+
+#invoice_item_page #invoice_items input[id="id_form-0-description"],
+#invoice_item_page #invoice_items input[id="id_form-1-description"],
+#invoice_item_page #invoice_items input[id="id_form-2-description"],
+#invoice_item_page #invoice_items input[id="id_form-3-description"],
+#invoice_item_page #invoice_items input[id="id_form-4-description"],
+#invoice_item_page #invoice_items input[id="id_form-5-description"],
+#invoice_item_page #invoice_items input[id="id_form-6-description"],
+#invoice_item_page #invoice_items input[id="id_form-7-description"],
+#invoice_item_page #invoice_items input[id="id_form-8-description"],
+#invoice_item_page #invoice_items input[id="id_form-9-description"] {
+                                        margin-left:-7.5em;
+                                        margin-right:-7.8em;
+                                        margin-top:0;
+                                        padding-top:0.5em;
+                                        width:30em;
+                                                }
+
+#invoice_item_page #invoice_items input[id="id_form-0-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-1-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-2-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-3-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-4-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-5-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-6-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-7-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-8-quantity"],
+#invoice_item_page #invoice_items input[id="id_form-9-quantity"] {
+                                        margin-left:-74.2px;
+                                        margin-right:-80.1px;
+                                        margin-top:0;
+                                        padding-top:0.5em;
+                                        width: 8.5em;
+                                        }
+
+
+#invoice_item_page #invoice_items input[id="id_form-0-price"],
+#invoice_item_page #invoice_items input[id="id_form-1-price"],
+#invoice_item_page #invoice_items input[id="id_form-2-price"],
+#invoice_item_page #invoice_items input[id="id_form-3-price"],
+#invoice_item_page #invoice_items input[id="id_form-4-price"],
+#invoice_item_page #invoice_items input[id="id_form-5-price"],
+#invoice_item_page #invoice_items input[id="id_form-6-price"],
+#invoice_item_page #invoice_items input[id="id_form-7-price"],
+#invoice_item_page #invoice_items input[id="id_form-8-price"],
+#invoice_item_page #invoice_items input[id="id_form-9-price"] {
+                                            margin-left:-87.2px;
+                                            margin-right:-93.1px;
+                                            margin-top:0;
+                                            padding-top:0.5em;
+                                            width: 14em}
+
+#invoice_item_page #invoice_items {padding-top:1em}
+
+#invoice_item_page #invoice_organization_name {
+    text-align:center;
+}
+
+#invoice_item_page #add_invoice_footer {
+text-align : center;
+
+}
+
+#invoice_item_page #number_div{
+top: 14px;
+right: 200px;
+left: 161px; 
+padding-left: 0px; 
+width: 59px;
+}
+
+#invoice_item_page #date_div {
+top: 16px; 
+left: 789px;
+width: 161px; 
+padding-left: 0px; 
+}
+
+#invoice_item_page #add_client {
+    top: 155px
+}
+
+#invoice_item_page #add_client_bouton {  
+    margin-bottom: 0px;
+    margin-left: 2px; 
+    margin-top: 0px;
+}
+#invoice_item_page #add_client_bouton input[name="add_client"]
+{
+    margin-left: 153px; 
+    margin-top: 19px;
+}
+#invoice_item_page #add_invoice {
+    margin-bottom: 14px;
+    padding-top: 0px;
+}
+
+#invoice_item_page #subject_div {
+    top: 110px;
+    bottom: 138px;
+}
+#invoice_item_page #tax_div {
+    top: 354px;
+    left: 581px;
+    margin-top: 1px;
+    height: 23px;
+    width: 58px;
+    padding-left: 0px;
+}
+#invoice_item_page #taxe_rate_div{
+top: 319px;
+left: 848px;
+margin-left: 29px;
+padding-left: 0px;
+width: 126px;
+height: 29px;
+}
+#invoice_item_page #facture_div {
+top: 0px;
+right: 321px;
+width: 631px;
+left:31px;
+}
+#invoice_item_page #invoice_form input[id="id_subject"] {
+margin-left:19px;
+padding-right: 1px;
+width: 195px;
+padding-left: 1px;
+}
+
+#invoice_item_page #invoice_form input[id="id_date"] {
+margin-left:14px;
+width:100px;
+}
+#invoice_item_page #invoice_form input[id="id_number"] {
+margin-left: 0px;
+width:31px;
+}
+#invoice_item_page #invoice_form select[id="id_client"] {
+margin-left:10px;
+width:100px;
+}
+#invoice_item_page #invoice_form input[id="id_location"] {
+margin-left:26px;
+margin-right:0;
+width:100px;
+}
+
+#invoice_item_page div#invoice_form #subject_div,
+#invoice_item_page div#invoice_form #tax_div,
+#invoice_item_page div#invoice_form #tax_rate_div{
+width: 95%;
+}
+
+#invoice_item_page label[for="id_location"],
+                   label[for="id_subject"],
+                   label[for="id_tax_rate"]{display: inline-block;
+                                            position: relative;
+                                            z-index: 10;
+                                            opacity: 0.4;
+                                            }
+
+
+#invoice_item_page h2 {
+border-bottom: 2px dotted #9F9F9F;
+margin-top: 0.5em;
+margin-bottom: 1em;
+text-align:right;
+padding-right:2ex;
+width: 90%;
+margin-left:2%;
+}
+
+#invoice_item_page #add_invoice input[type="submit"]{
+width: 129px;
+margin-top: 10px;
+margin-left: 86.6%;
+}
+
+#invoice_item_page #remove_item input[type="submit"]{
+margin-top: 0px;
+margin-left: -3px;
+}
+
+#invoice_item_page #add_item input[type="submit"]{
+margin-left:0;
+margin-right:21%;
+width:253px;
+}
+
+#invoice_item_page #invoice_items{
+width: 950px;
+}
+
+
+/* css page modification.html */
+
+#invoice_item_modification_page #add_item input[type="submit"]{
+margin-left: 0px;
+width: 255px;
+margin-right: 50.5%;
+
+}
+#invoice_item_modification_page #add_invoice input[type="submit"]{
+margin-left: 78%;
+margin-top: 10px;
+}
+
+#invoice_item_modification_page #invoice_form {
+float:left;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_date"]{
+width: 100px;
+margin-left: 33px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_number"]{
+width: 100px;
+margin-left: 10px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_location"]{
+width: 100px;
+margin-left: 42px;
+margin-right: 0px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_subject"]{
+width: 50px;
+margin-left: -2px;
+padding-right: 115px;
+}
+
+#invoice_item_modification_page #invoice_form select[id="id_type"]{
+width: 100px;
+margin-left: 18px;
+margin-top: -15px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_tax"]{
+width: 100px;
+margin-left: 5px;
+}
+
+#invoice_item_modification_page #invoice_form select[id="id_client"]{
+
+    width: 100px;
+    margin-left: 9px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_tax_rate"]{
+width: 40px;
+margin-left: -2px;
+}
+
+#invoice_item_modification_page #invoice_form li{
+color: #FF3000;
+margin-left:10px;
+list-style-type:none;
+margin-right:0
+}
+
+#invoice_item_modification_page #invoice_error tr{
+font-family: Arial, Sans-Serif;
+font-size: 20px;
+}
+
+#invoice_item_modification_page #invoice_error.sent {
+display : none;
+}
+
+#invoice_item_modification_page #invoice_error {
+padding-top:8em;
+}
+
+#invoice_item_modification_page #erreur_saisie {
+color: red;
+}
+
+#invoice_item_modification_page.send ul li{
+display : none;
+}
+
+/* Positionnement des elements de add invoice */
+
+#invoice_item_modification_page div#invoice_form {
+    background-color: #FFFFFF;
+}
+
+/*-- pour testing  div#invoice_form div {border:1px solid #888;} --*/
+
+#invoice_item_modification_page div#invoice_form {
+    position: relative;
+    width: 950px;
+    height: 108px;
+}
+
+#invoice_item_modification_page #add_item {
+    margin-left: 70px;
+}
+#invoice_item_modification_page div.lis {
+    padding: 0 0 0 21px;
+    width: 50%;
+    position: absolute;
+    top: 280px;
+}
+
+#invoice_item_modification_page #message_erreur{
+margin-left: 350px; margin-top: 15px;
+}
+
+#invoice_item_modification_page #location_div {
+    top: 47px;
+    left: 807px; 
+    width: 200px;
+    margin-left: 0px; 
+    padding-left: 0px; 
+}
+
+#invoice_item_modification_page #location_div input[id="id_location"]{
+width: 215px;
+}
+#invoice_item_modification_page #invoice_items input[id="id_form-0-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-1-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-2-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-3-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-4-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-5-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-6-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-7-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-8-description"],
+#invoice_item_modification_page #invoice_items input[id="id_form-9-description"]
+                                                    {
+                                                    margin-left:-7.5em;
+                                                    margin-right:-7.8em;
+                                                    margin-top:0;
+                                                    padding-top:0.5em;
+                                                    width:30em;
+                                                            }
+
+#invoice_item_modification_page #invoice_items input[id="id_form-0-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-1-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-2-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-3-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-4-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-5-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-6-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-7-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-8-quantity"],
+#invoice_item_modification_page #invoice_items input[id="id_form-9-quantity"]
+                                            {
+                                            margin-left:-74.2px;
+                                            margin-right:-80.1px;
+                                            margin-top:0;
+                                            padding-top:0.5em;
+                                            width: 8.5em;
+                                            }
+
+#invoice_item_modification_page #invoice_items input[id="id_form-0-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-1-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-2-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-3-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-4-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-5-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-6-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-7-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-8-price"],
+#invoice_item_modification_page #invoice_items input[id="id_form-9-price"] 
+                                            {
+                                            margin-left:-87.2px;
+                                            margin-right:-93.1px;
+                                            margin-top:0;
+                                            padding-top:0.5em;
+                                            width: 14em}
+
+#invoice_item_modification_page #invoice_items {
+padding-top:1em;
+width:100%;
+}
+
+#invoice_item_modification_page #invoice_organization_name {
+text-align:center;
+}
+
+#invoice_item_modification_page #add_invoice_footer {
+text-align:center;
+
+}
+
+#invoice_item_modification_page #add_invoice_footer_2 {
+text-align:center;
+}
+
+
+#invoice_item_modification_page #number_div{
+top: 14px;
+left: 151px;
+right: 200px;
+padding-left: 0px;  
+width: 74px;
+}
+
+#invoice_item_modification_page #date_div {
+top: 13px;
+left: 790px;
+width: 201px;
+padding-left: 0px;
+}
+
+#invoice_item_modification_page #add_client {
+top: 155px
+}
+
+#invoice_item_modification_page #add_client_bouton {
+margin-top: -50px;
+}
+#invoice_item_modification_page #add_invoice {
+margin-bottom: 14px;
+padding-top: 0px;
+}
+#invoice_item_modification_page #client_div{
+top: 48px;
+left: 6px;
+width: 158px; 
+padding-left: 0px;
+}
+#invoice_item_modification_page #subject_div {
+top: 110px;
+bottom: 138px;
+}
+#invoice_item_modification_page #tax_div {
+top: 354px;
+left: 581px;
+margin-top: 1px;
+height: 23px;
+width: 58px;
+padding-left: 0px;
+}
+#invoice_item_modification_page #taxe_rate_div{
+top: 319px;
+left: 848px;
+margin-left: 29px;
+padding-left: 0px;
+width: 126px;
+height: 29px;
+}
+#invoice_item_modification_page #facture_div {
+top: 0px;
+right: 321px;
+width: 631px;
+left:31px;
+}
+#invoice_item_modification_page #invoice_form input[id="id_subject"] {
+margin-left:19px;
+padding-right: 1px;
+width: 224px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_date"] {
+margin-left:14px;
+width:100px;
+}
+
+#invoice_item_modification_page #invoice_form input[id="id_number"] {
+margin-left: 0px;
+width:31px;
+}
+
+
+
+
+#invoice_item_modification_page #invoice_form input[id="id_location"] {
+margin-left: 27px;
+margin-right:0;
+width: 100px;
+}
+
+#invoice_item_modification_page div#invoice_form #subject_div,
+#invoice_item_modification_page div#invoice_form #tax_div,
+#invoice_item_modification_page div#invoice_form #tax_rate_div{
+width: 95%;
+}
+
+
+#invoice_item_modification_page #id_type {
+font-weight: bold;
+/*
+margin-top: 21px;
+*/
+}
+
+#invoice_item_modification_page #invoice_type{
+margin-top: 20px;
+width: 124px; 
+margin-left: 26px;
+}
+
+#invoice_item_modification_page label[for="id_location"],
+                   label[for="id_subject"],
+                   label[for="id_tax_rate"]{display: inline-block;
+                                            position: relative;
+                                            z-index: 10;
+                                            opacity: 0.4;
+                                            }
+
+/*
+input[type=text]{
+    position: relative;
+    z-index: 1;
+    }
+*/
+
+#invoice_item_modification_page h2 {
+border-bottom: 2px dotted #9F9F9F;
+margin-top: 0.5em;
+margin-bottom: 1em;
+text-align:right;
+padding-right:2ex;
+width: 90%;
+margin-left:2%;
+}
+
+#invoice_item_modification_page #invoice_form {
+float:left;
+}
+
+/*
+width: 254px;
+margin-left: -360px;
+*/
+}
+
+#invoice_item_modification_page #add_invoice input[type="submit"]{
+margin-top: 8px;
+width: 135px;
+margin-left: 895px;
+}
+
+#invoice_item_modification_page #remove_item input[type="submit"]{
+margin-left: 816px;
+}
+
+
+/* css page d'ajout d'un client */
+
+#add_client_page h1{
+margin-top: 10px;
+margin-left: 355px;
+}
+
+#add_client_page #erreur_add_client {
+margin-left: 460px;
+width: 150px;
+margin-top: 20px;
+color: red;
+font-weight: bold;
+}
+
+#add_client_page form{
+margin-left: 330px;
+margin-top: 25px;
+}
+
+#add_client_page #name_div input[name = "name"]{
+left: 20px;
+}
+
+#add_client_page #address_div {
+margin-top: 40px;
+}
+
+#add_client_page #back_bouton {
+margin-left: 85px;
+}
+
+#add_client_page #add_client_validator input[type = "submit"]{background-color:#F5F5F5;
+border-left:1px solid #EEEEEE;
+border-right:1px outset #DEDEDE;
+border-style:solid outset outset solid;
+border-top:1px solid #E3E3E3;
+border-width:1px;
+color:#565656;
+cursor:pointer;
+display:block;
+float:left;
+font-family:"Lucida Grande",Tahoma,Times New Roman,Verdana,sans-serif;
+font-size:130%;
+font-weight:bold;
+line-height:130%;
+margin-left: 10px;
+margin-top: -7px;
+padding:5px 10px 5px 7px;
+text-decoration:none;}
+
+
+#add_client_page #add_client_validator input[type = "submit"]:hover{
+  background-color:fff;
+  border:1px solid #B1B1B4;
+  color:#02060B;
+  border-style:inset;
+  }
+#invoice_item_page #errors{ margin-top: -97px;
+                            margin-left: 345px;
+                            text-decoration:blink;
+                            width: 308px;
+                            height: 0px;
+                            margin-right: 0px;
+                           }
+
+#invoice_item_page #invoice_items{
+width: 950px;
+}
+
+/* css page de creation de l'organisation */
+
+#add_organization_page h1{
+margin-left: 235px;
+padding-bottom:0em;
+padding-left:2em;
+padding-right:2em;
+padding-top:2em;
+}
+
+#add_organization_page #organization_page_error {
+font-weight: bold;
+color: red;
+}
+
+#add_organization_page form{
+margin-top: 20px; 
+margin-left: 150px; 
+width: 820px;
+}
+
+#add_organization_page #menu_label {
+float:left;
+padding: 0px;
+border-width: 0px;
+margin-bottom: 0px;
+margin-right: 0px;
+margin-left: -155px;
+background : #FFFFFF;
+width: 610px;
+}
+
+#add_organization_page #menu_explanation {
+float:right;
+margin-left: 0px;
+padding: 0px;
+border-width: 0px;
+margin-bottom: 0px;
+width: 330px;
+margin-right: 89px;
+margin-top: 0px;
+background : #FFFFFF;
+}
+
+#add_organization_page #menu_label #label_name {
+margin-top: 7px;
+}
+#add_organization_page #menu_label input[id = "id_name"] {
+left: 70px;
+height: 25px;
+margin-left: -2px;
+}
+
+
+#add_organization_page  #label_image{
+margin-top: 7px;
+}
+#add_organization_page  #label_image select[id = "id_image"]{
+left: 70px;
+width: 280px;
+margin-left: 30px;
+}
+
+#add_organization_page #label_image #edit_logo_link {
+margin-left: 460px;
+margin-top: -30px;
+}
+
+#add_organization_page a {
+color:red;
+}
+#add_organization_page  #label_address {
+    margin-top: 10px;
+}
+#add_organization_page form textarea[id = "id_address"]{
+    height: 95px;
+    margin-left: 160px;
+}
+
+
+#add_organization_page  #label_extra {
+margin-top: 15px;
+width: 465px;
+}
+
+#add_organization_page form input[id = "id_address_extra"]{
+    margin-top: 10px;
+    height: 20px;
+    margin-left: 160px;
+}
+
+#add_organization_page  #label_extra2 {
+    margin-top: 15px;
+    width: 507px;
+}
+
+#add_organization_page  input[id = "id_address_extra2"]{ 
+    margin-top: 10px;
+    height: 20px; 
+    width: 195px;
+    margin-left: 160px;
+}
+
+#add_organization_page  #label_legal_infos {
+    margin-top: 10px;
+    width: 170px;
+    height: 20px;
+}
+#add_organization_page  textarea[id = "id_legal_infos"] {
+height: 95px;
+margin-left: 160px;
+}
+
+#add_organization_page  input[name="add_logo"]{
+
+}
+
+#add_organization_page  input[name="valider"]{
+margin-top: 130px; 
+margin-left: 312px;
+}
+
+#add_organization_page #menu_explanation #organization_validate_boutton{
+margin-left: -115px;
+margin-top: 30px;
+}
+
+#add_organization_page .example{
+color: #FF00AF;
+
+}
+/* css page de modification de l'organisation */
+
+#edit_organization_page h1{
+margin-left: 235px;
+padding-bottom:0em;
+padding-left:2em;
+padding-right:2em;
+padding-top:2em;
+}
+
+#edit_organization_page #organization_page_error {
+font-weight: bold;
+color: red;
+}
+
+#edit_organization_page form{
+margin-top: 20px; 
+margin-left: 150px; 
+width: 820px;
+}
+
+#edit_organization_page #menu_label {
+float:left;
+padding: 0px;
+border-width: 0px;
+margin-bottom: 0px;
+margin-right: 0px;
+margin-left: -155px;
+background : #FFFFFF;
+width: 610px;
+}
+
+#edit_organization_page #menu_explanation {
+float:right;
+margin-left: 0px;
+padding: 0px;
+border-width: 0px;
+margin-bottom: 0px;
+width: 330px;
+margin-right: 89px;
+margin-top: 0px;
+background : #FFFFFF;
+}
+
+#edit_organization_page #menu_label #label_name {
+margin-top: 7px;
+}
+#edit_organization_page #menu_label input[id = "id_name"] {
+left: 70px;
+height: 25px;
+margin-left: -2px;
+}
+
+
+#edit_organization_page  #label_image{
+margin-top: 7px;
+}
+#edit_organization_page  #label_image select[id = "id_image"]{
+left: 70px;
+width: 280px;
+margin-left: 30px;
+}
+
+#edit_organization_page #label_image #edit_logo_link {
+margin-left: 460px;
+margin-top: -30px;
+}
+
+#edit_organization_page a {
+color:red;
+}
+#edit_organization_page  #label_address {
+    margin-top: 10px;
+}
+#edit_organization_page form textarea[id = "id_address"]{
+    height: 95px;
+    margin-left: 160px;
+}
+
+
+#edit_organization_page  #label_extra {
+margin-top: 15px;
+width: 465px;
+}
+
+#edit_organization_page form input[id = "id_address_extra"]{
+    margin-top: 10px;
+    height: 20px;
+    margin-left: 160px;
+}
+
+#edit_organization_page  #label_extra2 {
+    margin-top: 15px;
+    width: 507px;
+}
+
+#edit_organization_page  input[id = "id_address_extra2"]{ 
+    margin-top: 10px;
+    height: 20px; 
+    width: 195px;
+    margin-left: 160px;
+}
+
+#edit_organization_page  #label_legal_infos {
+    margin-top: 10px;
+    width: 170px;
+    height: 20px;
+}
+#edit_organization_page  textarea[id = "id_legal_infos"] {
+height: 95px;
+margin-left: 160px;
+}
+
+#edit_organization_page  input[name="add_logo"]{
+
+}
+
+#edit_organization_page  input[name="valider"]{
+margin-top: 130px; 
+margin-left: 312px;
+}
+
+#edit_organization_page #menu_explanation #organization_validate_boutton{
+margin-left: -115px;
+margin-top: 30px;
+}
+
+#edit_organization_page .example{
+color: #FF00AF;
+
+}
+/* css de la page de choose_logo_page */
+
+#choose_logo_page #ajout{
+float: right;
+}
+#choose_logo_page #choix{
+float: left;
+}
+#choose_logo_page ul{margin-bottom: 0px; margin-right: 39px;
+                                 padding-left: 0px;margin-top: 145px;}
+#choose_logo_page #pagination{
+text-align :center;
+}
+#choose_logo_page h1{
+margin-top: 40px; border-bottom-width: 9px; margin-bottom: 39px;
+}
+
+#choose_logo_page #image_list{
+width: 600px; 
+margin-top: 40px;
+}
+
+/* css de la page de login */
+
+#login_page #logo_login {
+float: left;
+width: 248px;
+margin-top:-21px;
+color: #000000;
+}
+#login_page #ul#menu{
+margin-top:-21px;
+}
+
+#login_page #info_site  {
+margin-top: 10px;
+float: left;
+margin-right: 40em;
+border-right-width: 0px;
+margin-right: 0px;
+width: 300px;
+padding-right: 168px;
+                        }
+#login_page #info_site  p[id='gras']{color: red;
+                                     margin-bottom: 0px;
+                                     font-weight: bold;
+                                    }
+
+#login_page #info_site  p{font-style:italic}
+#login_page #info_site  h3,h5   {text-align:center
+                                }
+#login_page #authentification {margin-right: 10px;
+                              }
+#logo_login h1 a {
+                color: #0C0C0C;
+                text-transform:lowercase;
+                font-size:1.4em;
+                 }
+#login_page #menu{margin-top:0em;}
+#login_page #menu input[id='id_password'],
+                  input[id='id_username']{height: 14px;
+                                           padding-top: 1px;
+                                           margin-top: 11px;
+                                           border-width: 0.3em;
+                                          }
+
+#login_page #menu input[id='id_Connexion']{
+                                            height:25px;
+                                            margin-left:74px;
+                                            margin-top:9px;
+                                            width:119px;
+                                          }
+#logo_login h1 span {color: #E45F1F;
+                    font-family:hardrock,Times New Roman,Helvetica,sans-serif;
+                   }
+
+#login_page #authentification input[id ='id_Connexion']{margin-left: 180px;
+                                                        margin-top: 0px;
+                                                        }
+
+#login_page #central-column  img{
+border-bottom-width: 0px;
+margin-left: 127px;
+height: 310px;
+width: 355px;
+margin-top: 46px;}
+
+#login_page #image {
+    margin-top: 10em;
+    margin-left: 13em;
+}
+
+#login_page #entete h4{
+    color : blue;
+    position : center;
+}
+
+#login_page #authentification input[type="submit"]{margin-top:1em;
+                                                   margin-left: 12.5em;
+                                                  }
+
+/* css de la page du dashboard */
+
+#dashboard_page #invoice-pagination li{
+    margin-left: 1ex;
+    display: inline;
+}
+
+#dashboard_page #dashboard_invoice_boutton {
+    padding: 0em ;
+    color:#9F9F9F;
+}
+
+#dashboard_page h1{
+    margin-left: 350px;
+    padding-bottom:0em;
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+    font-family:"Lucida Grande",Tahoma,Times
+}
+
+#dashboard_page .table_link {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+/*
+#dashboard_page#table {
+    width: 970px;
+}
+*/
+
+#dashboard_page #add_invoice{
+margin-top:84px;
+padding-left:29em;
+font-family:"Lucida Grande",Tahoma,Times
+}
+
+/* css de la page delete_confirm */
+
+#delete_confirm_page h1{
+margin-left: 263px;
+}
+#delete_confirm_page #decalage{
+    margin-top:2em;
+    margin-left: 0em;
+    padding: 1em
+}
+
+#delete_confirm_page h1{
+    padding-bottom:0em;
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+}
+#delete_confirm_page #confirm  {
+    padding-left: 723px;
+}
+
+/* css de la page home */
+
+#home_page #central{
+    margin-top: 6em;
+}
+
+#home_page #central li {
+    list-style-type:none;
+}
+
+#home_page #invite {
+    border-top: 2px solid black;
+    border-bottom: 2px solid pink;
+    padding: 0em ;
+}
+
+
+/* css de la page invoice_done */
+
+#invoice_done_page #org {
+    float:right;
+}
+#invoice_done_page table.invoice-items tr td {
+    height: 21px;
+}
+#invoice_done_page #information {
+    margin-left: 0px;
+    margin-top: 9px;
+    margin-bottom: 55px;
+    width: 283px;
+}
+#invoice_done_page #information p {
+    margin: 0px;
+}
+
+#invoice_done_page #invoice_organization_name ul li{
+color: black;
+}
+
+#invoice_done_page #invoice_organization_name {
+float:right;
+
+}
+#invoice_done_page #sign {
+
+    float: right;
+    margin-top: 6px;
+    margin-left: 434px;
+}
+#invoice_done_page #int_lettre {
+
+    float: right;
+    list-style-type:none;
+}
+#invoice_done_page #pied_page{
+                              text-align:center;
+                            }
+#invoice_done_page #decalage{
+    margin-top:2em;
+    margin-left: 0em;
+    padding: 1em
+}
+/* css de la page administration */
+
+#administration_page #menu {
+    float: right;
+    width: 700px;
+}
+
+#administration_page #options_admin  a, li {
+    list-style-type:none;
+    color : #A8B2B8;
+}
+
+#administration_page h1{
+    padding-bottom:0em;
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+}
+
+/* css de la page owner */
+
+#owner_page #list_owner img {
+    margin-top: 2em;
+}
+#owner_page h1{
+    padding-bottom:0em;
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+}
+
+
+#owner_page .table_link {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+
+/* css du template */
+
+body {
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+/*
+    background: #FAF8F8
+*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #3C3D3F;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    color: #B0A9A9;
+
+}
+
+h1 {
+    font-size: 2em;
+    font-family:"Lucida Grande",Tahoma,Times
+}
+
+h2 {
+    font-size: 2.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+p, ul, ol {
+    margin-top: 0;
+    line-height: 180%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* css du Logo */
+
+#logo {
+    float: left;
+    width: 300px;
+    margin-top: -68px;
+    margin-left: 52em;
+    padding: 0;
+    color: #000000;
+}
+
+
+#logo1 {font-size: 2px;
+    float: left;
+    width: 270px;
+    margin: 0;
+    padding: 0;
+}
+
+#logo h1, #logo p {
+}
+
+#logo h1{
+    letter-spacing: -1px;
+/*
+    text-transform: lowercase;
+*/
+    font-size: 2.3em;
+    color: #0C0C0C;
+}
+
+#logo h1 a {
+    color: #0C0C0C;
+    font-family: hardrock, Times New Roman, Helvetica, sans-serif;
+}
+
+#logo h1 span {
+    color: #FF7000;
+}
+
+#logo p {
+    margin: -5px 0px 0px 0px;
+    padding: 0px 0 0 px;
+    text-transform: lowercase;
+    font: normal 14px Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    color: #45302C;
+}
+
+#logo a {
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: #45302C;
+    text-transform:lowercase;
+}
+#logo a:hover {color: #D64A4A;
+            height: 35px;
+            text-transform:lowercase;
+    }
+/** css des Tables **/
+
+caption {
+    height: 3em;
+    padding-top:0.5em;
+    text-align: center;
+}
+
+
+
+table{
+    margin: auto; /* Centre le tableau */
+    border: 4px outset green; /* Bordure du tableau avec effet 3D (outset) */
+    border-collapse: collapse; /* Colle les bordures entre elles */
+    width: 100%;
+}
+
+table, table td ,table th{
+    border: 1px solid #ccc;
+    text-align: center;
+}
+table th{
+    border: 1px solid #ccc;
+    background: #DDDDDD;
+    font-family:"Verdana", Tahoma, Times New Roman, Lucida Grande, sans-serif;
+}
+
+tfoot td{
+    background-color:#FFFFFF;
+    text-align: centre;}
+}
+
+td a {
+    color:#282125;
+    text-decoration:none;
+}
+
+/* css des fieldset */
+fieldset {
+    background: #DDDDDD;
+    color: #3B2323;
+    border:2px solid #E2E2E2;
+
+    }
+
+/* css du menu */
+ul#menu { width: 100%;
+          height: 43px;
+          background: #FFF url("images/menu-bg.gif") top left repeat-x;
+          font-size: 1em;
+          font-family: "Lucida Grande", Verdana, sans-serif;
+          font-weight: bold;
+          list-style-type: none;
+          margin: 0; padding: 0;
+        }
+
+ul#menu li  {display: block;
+             float: left;
+             margin: 0 0 0 5px;
+             color: #381200;
+            }
+
+ul#menu li a {height: 43px;
+              color: #000000;
+              text-decoration: none;
+              display: block;
+              float: left;
+              line-height: 200%;
+              padding: 8px 15px 0;
+              font-family:"Lucida Grande", Tahoma, Times New Roman, Verdana, sans-serif;
+             }
+
+ul#menu li a:hover {color: #4D2A2A;
+                    text-decoration: underline;
+                   }
+
+ul#menu li a.current{ color: #FFF;
+                      background: #FFF url("images/current-bg.gif") top left repeat-x;
+                      font-size:155%;
+                      padding:1px 15px 0;
+                    }
+
+#menu ul {
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    list-style: none;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu a {
+    display: block;
+    float: left;
+    height: 37px;
+    padding: 13px 30px 0px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0C0C0C;
+    padding-left:52px;
+}
+
+#menu a:hover {
+    text-decoration: none;
+}
+
+#menu .current_page_item a {
+    background: #D5E0E0;
+    text-decoration: none;
+    color:  #190F0F;
+}
+
+#menu .current_page_item a {
+    color: #190F0F;
+}
+
+tr.even td {
+    -moz-background-clip:border;
+    -moz-background-origin:padding;
+    -moz-background-size:auto auto;
+    background-attachment:scroll;
+    background-color:#F1EFEB;
+    background-image:none;
+    background-position:0 0;
+    background-repeat:repeat;
+}
+
+/*  fonction jquery click_table qui permet de clicker
+    sur toute une ligne d'un tableau
+*/
+
+table#click_table {
+    border-collapse: collapse;
+}
+
+#click_table tr {
+/*
+    background-color: #E97979;
+*/
+    border-top: 1px solid #fff;
+}
+
+
+#click_table td:hover {
+    background-color: #D0E7F4;
+}
+/*
+#click_table th {
+    background-color: #fff;
+}
+*/
+#click_table th, #click_table td {
+    padding: 3px 5px;
+}
+
+#click_table td:hover {
+    cursor: pointer;
+}
+#right{
+text-align:right;
+}

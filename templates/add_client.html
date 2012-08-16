@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Add-invoice{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+    <script type="text/javascript" language="javascript" src="jquery-1.4.2.min.js"></script>
+
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_client %}" title="" class="current">ajout-client</a></li>
+        <li ><a href="{% url edit_organization %}" title="">Vos contacts</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+
+    <div id="add_client_page">
+        <h1> Formulaire d'ajout de client</h1>
+    <div id = "erreur_add_client">
+        {{error}}
+    </div>
+            <form action="" method="post" id="add_client">{% csrf_token %}
+                    {{ formset.management_form }}
+
+                    <div id = "name_div">
+                        {{form.name.label_tag}}:
+                        {{form.name}} {{form.name.errors}}
+                    </div>
+
+
+                    <div id = "address_div">
+                    <div id ="address_libele">
+                        {{form.address.label_tag}}:
+                    </div>
+                        {{form.address}}
+                    </div>
+
+                    <div id = "back_bouton">
+                        <a href="{% url add_invoice %}" class = "button">annuler</a>
+                    </div>
+
+                    <div id = "add_client_validator">
+                        <br><input type='submit' value =  "Créer" />
+                    </div>
+
+
+            </form>
+    </div>
+{% endblock %}

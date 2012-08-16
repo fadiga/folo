@@ -1,0 +1,20 @@
+{% load i18n %}
+{% if not in_empty_case %}
+
+        {% if page.has_previous %}
+               <b><a href="{{page.url_first}}">&#8249; 1...    </a></b>
+        {% endif %}   
+        {% if page.has_previous and not page.is_before_first %}
+               <b><a href="{{page.url_previous}}">   &#171; Précedent  </a></b>
+        {% endif %}
+       
+
+        {% if page.has_next %}
+            <b><a href="{{page.url_next}}">Suivant &#187;</a></b>
+        {% endif %}
+        
+        {% if page.has_next %}
+            <b><a href="{{page.url_last}}">...{{paginator.num_pages }} &#155;</a></b>
+        {% endif %}
+
+{% endif %}

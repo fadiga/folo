@@ -1,0 +1,36 @@
+﻿Un utilisateur qui n'a jamais vu le site.
+
+Il va chercher à savoir si il y a des indication sur la manière dont fonctionne le site.
+Il va chercher à s'inscrire.
+Après être inscrit, il va chercher à accéder à son compte.
+Après il va regardé la page pour connaître les options dont il dispose.
+ Il va cherché a  faire sa première facture ( en cliquant sur le bouton ajouter une facture).
+Il va regardé chaque champs et essayé de comprendre les valeurs qu'ils acceptent.
+Il va chercher à valider la facture.
+Il s'attendra à voir sa facture en intégralité et avoir la possibilité soit de retourner sur le dashboard, soit d'imprimer sa facture.
+Il voudra imprimer pour ce rendre vraiment compte du résultat.
+ Après il voudra regardé les autres menus pour les découvrir.
+Un utilisateur déjà inscrit
+
+il s'identifie;
+il consulte ses anciennes factures;
+il crée une facture au besoin.
+Il réutilisera une ancienne facture, s'il a eu la même commande d'un même client.
+Il pourra  aussi vouloir changer ses informations personnelles.
+
+Création de facture
+on suppose qu'il est déjà identifié.
+Il clique sur le bouton ajouter une facture.
+Il rempli les champs en cherchant à connaître ce qu'il doit mettre dans chaque champs.
+
+
+
+Consultation facture
+
+Il va chercher un bouton ou un lien lui permettant de se rendre  a la page de consultation des factures.
+Il va chercher a identifier la facture qu'il recherche.
+Une fois qu'il le trouve; il voudra cliquer sur la facture.
+Il s'attendra a ce que la facture lui soit montrer en mode aperçu.
+Il pourra avoir besoin aussi de modifier la facture pour la réutiliser.
+Il s'attendra à avoir la possibilité de quitter la page de consultation.
+

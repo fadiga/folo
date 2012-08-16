@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Dashboard{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="" class="current">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="">Vos contacts</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+
+<div id = "dashboard_page">
+        <h1>{{title_page}}</h1>
+    
+        <div id = "dashboard_invoice_boutton">
+            <a href="{% url dashboard %}?display=all" class = 'button'>Toutes</a>
+            <a href="{% url dashboard %}?display=facture" class = 'button'>Factures</a>
+            <a href="{% url dashboard %}?display=proforma" class = 'button'>Proformas</a>
+
+        </div>
+
+        {% if page.object_list %}
+            <div id="invoice-pagination" class="prepend-16">
+                <span>{% include "_invoices_pagination.html" %}</span>
+            </div>
+
+            <table id="click_table">
+                <th>Type</th>
+                <th>Numero</th>
+                <th>Nom du client</th>
+                <th>Date</th>
+                <th>Dupliquer</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+                <th>PDF</th>
+                {% for f in page.object_list %}
+                    <tr>
+                        <td>{{f.type}}</a></td>
+                        <td> <a class='table_link' href="{{f.url_show_invoice }}"><img src="/static/css/images/Preview2.png" width="25" height="23" >{{f.number}}</a></td>
+                        <td>{{f.client.name}}</td>
+                        <td>{{ f.date}}</td>
+                        <td><a class='table_link' href="{{f.url_duplicate }}"><img src="/static/css/images/duplicate1.png" width="20" height="20" /</a></td>
+                        <td><a class='table_link' href="{{f.url_modification }}"><img src="/static/css/images/modif.png" width="20" height="20" /</a></td>
+                        <td><a class='table_link' href="{{f.url_delete_confirm }}"><img src="/static/css/images/Delete.png" width="20" height="20" /</a></td>
+                        <td><a class='table_link' href="{{f.url_pdf}}"class = "button"><img src="/static/css/images/pdf.png" width="20" height="20" /</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {%if drapo %}
+                <div id = "indi">
+                    <a href="{% url dashboard %}?display=all" class = 'button'>Toutes</a>
+                    <a href="{% url dashboard %}?display=facture" class = 'button'>Factures</a>
+                    <a href="{% url dashboard %}?display=proforma" class = 'button'>Proformas</a>
+                </div>
+                <div id="invoice-pagination" class="prepend-16">
+                    <span>{% include "_invoices_pagination.html" %}</span>
+                </div>
+            {%endif%}
+            {%else %}
+            <div id ="add_invoice">
+                        Vous avez pas de {{link_page}}
+                <p> <a href="{% url add_invoice %}?display={{link_page}}"
+                            class="button"
+                            style="padding-bottom:18px;padding-right: 20px; padding-left: 26px; padding-top: 20px;"
+                            ><img src="/static/css/images/ajoute.png"
+                             width ='540' height='540'>Ajouter {{link_page}}</a></p>
+            </div>
+        {%endif%}
+ </div>
+ {% endblock %}

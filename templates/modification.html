@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Modification{% endblock %}
+{% block page-id %}Modification{% endblock %}
+{% block content %}
+<script type="text/javascript" language="javascript" src="jquery-1.4.2.min.js"></script>
+
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title ="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title ="" class="current">Modification</a></li>
+        <li ><a href="{% url edit_organization %}" title="">Vos contacts</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+    <div id= "invoice_item_modification_page" class='{{valide}}'>
+
+    <form action="" method="post" id="invoice_form">{% csrf_token %}
+        {{ formset.management_form }}
+        <div id = "invoice_organization_name">
+            <h1> {{organization}}</h1>
+        </div>
+
+        <div id = 'invoice_form' >
+<!--
+            <div id = "message_erreur">
+                {%if form.errors %}
+                {{ form.client.errors }}
+                {% endif %}
+            </div>
+-->
+
+        <div id= "invoice_type">
+            <select name="type" id="id_type">
+                <option value="1">Facture</option>
+                <option value="2">Proforma</option>
+            </select>
+        </div>
+            <div id = 'number_div' class = 'lis'>
+                <label id = 'n'>
+                    N°
+                </label>
+                {{form.number}}
+            </div>
+
+            <div id = 'date_div' class = 'lis'>
+                {{form.date.label}}
+                {{form.date}}
+            </div>
+
+            <div id = 'subject_div' class = 'lis'>
+               
+            </div>
+
+            {% if form.errors %}
+            <div id = "message_erreur">
+                {{ form.client.errors }}
+            </div>
+            <div id ='client_div' class = 'lis'>
+                {{form.client.label}}
+                {{form.client}}
+            </div>
+            {% else %}
+            <div id ='client_div' class = 'lis'>
+                {{form.client.label}}
+                {{form.client}}
+            </div>
+            {% endif %}
+
+            <div id='location_div' class = 'lis'>
+                {{form.location.label}}
+                {{form.location}}
+            </div>
+        </div>
+        <div id = 'invoice_items'>
+            <table>
+                {% if  valide != 'send' %}
+                    {% if  formset.errors %}
+                        <tr><td colspan="3">{{ formset.errors }}</td></tr>
+                    {% endif %}
+                {% endif %}
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>description</th>
+                        <th>P.U.</th>
+                        <th>Montant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field in formset.forms %}
+                         <tr id="yes">
+                             <td class='quantity'>{{ field.quantity }}</td>
+                             <td>{{ field.description }}</td>
+                             <td class='price'>{{ field.price }}</td>
+                             <td class="total"></td>
+                         </tr>
+                    {% endfor %}
+                    <tr>
+                        <td rowspan=1 colspan=4>
+                            <span id="add_item"><input type='submit' name = 'add_item_' value =  " + Ajouter une ligne"/></span>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+                <tfoot >
+                     <tr >
+                        <td rowspan=4 colspan="2"></td>
+                        <td >Taux T.V.A {{form.tax}} </td>
+                        <td>{{form.tax_rate}}</td>
+                    </tr>
+                    <tr >
+                        <td >Total H.T</td>
+                        <td id="items_total">{{ ht }}</td>
+                    </tr>
+                    <tr>
+                        <td >{{"T.V.A"}}</td>
+                        <td id="taxes" >{{ tva }}</td>
+                    </tr>
+                    <tr>
+                        <td>Total T.T.C</td>
+                        <td id="items_total_plus_taxes">{{ ttc }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div id= "add_invoice">
+                <input type='submit' name = 'add_invoice' value =  "Enregister les modifications"/>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+           $('#id_date').datepicker({ dateFormat: 'dd/mm/yy',
+                                      showButtonPanel: true,
+                                      closeText: 'X'
+                                    });
+
+           //(1) trouve le checkbox et creer une variable
+           var taxRateDiv = $('#id_tax_rate');
+          //(2) créer une fonction qui test si checkbox est coché
+            //    si le checkbox est coché, afficher le champs taux
+            //    si non, cache le
+            test()
+            function test(){
+               if ($("#id_tax").is(':checked')){
+                    taxRateDiv.parent().show();
+                    }
+                else{
+                    taxRateDiv.parent().hide();
+                    }
+            }
+
+            //(3) Quand le page loads, appele notre fonction
+           // test()
+
+            //(4) Quand le checkbox est coché appelé notre fonction
+           $("#id_tax").click(function(){
+               test()
+            });
+
+            function update_items_total() {
+
+                var items_total = 0;
+
+                $( '#invoice_items tbody tr').each(function(i){
+
+                    $row = $(this);
+                    $td = $row.children('td');
+
+                    var quantity = $($td[0]).children('input').val();
+                    var price = $($td[2]).children('input').val();
+                    var total = '';
+                    if (price && quantity)
+                        total = price * quantity;
+                        items_total = items_total + total;
+
+                    $($td[3]).text(total);
+
+                });
+
+                if (items_total == 0)
+                {
+                    $("#items_total").text('');
+                    $("#items_total_plus_taxes").text('');
+                }
+                else
+                {
+                    $("#items_total").text(items_total);
+                    if ($("#id_tax").is(':checked')){
+                        var taxes = $("#id_tax_rate").val();
+                    }
+                    else{var taxes = 1
+                        }
+                    if (taxes == 1)
+
+                       { var items_total_plus_taxes = 0;
+                           items_total_plus_taxes = items_total * taxes ;
+                        $("#taxes").text(0);}
+                    else
+                        {var items_total_plus_taxes = 0;
+                            items_taxes = items_total * (taxes / 100);
+                            items_total_plus_taxes = Number(items_total) + Number(items_taxes);
+                            $("#taxes").text(taxes / 100);
+                            }
+                    $("#items_total_plus_taxes").text(items_total_plus_taxes);
+
+                }
+            }
+
+            update_items_total()
+
+            $("#id_tax").click(function(){
+
+                update_items_total()
+            })
+
+            $( '.price, .quantity, #id_tax_rate').keyup(function(){
+
+                update_items_total()
+            })
+
+            </script>
+            <div id = 'add_invoice_footer'>
+               {{organization.address}}
+            </div>
+            <div id= "add_invoice_footer_2">
+                {{organization.address_extra}}
+                {{organization.address_extra2}}
+                {{organization.legal_infos}}
+            </div>
+        </form>
+
+</div>
+
+{% endblock %}
+
+

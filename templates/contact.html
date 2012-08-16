@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Home{% endblock %}
+{% block page-id %}Add-invoice{% endblock %}
+{% block content %}
+    <ul id="menu">
+        <li ><a href="{% url dashboard %}" title="">resumé</a></li>
+        <li ><a href="{% url add_invoice %}" title="">ajout-facture</a></li>
+        <li ><a href="{% url edit_organization %}" title="" class="current">organisation</a></li>
+    </ul>
+    <div id="logo">
+        <span>{% include "_bienvenu_utilisateur.html" %}</span>
+    </div>
+
+    <div id = "contact_page">
+        <center><h1>Gestion des informations des contacts</h1></center>
+        <div id="decalage">
+            <table>
+                <tr>
+                    <th>Nom de l'organisation</th>
+                    <th>Adresse de l'organisation</th>
+                    <th>Propriéteur</th>
+                    <th>Modifier</th>
+                </tr>
+                {% for organization in organizations %}
+                <tr>
+                    <td>{{organization.name}}</a></td>
+                    <td>{{organization.address}}</td>
+                    <td>{{organization.owner}}</td>
+                    <td><a href='{{organization.url}}'>M</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+ {% endblock %}
