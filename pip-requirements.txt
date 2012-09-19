@@ -1,0 +1,8 @@
+Django==1.4.1
+PIL==1.1.7
+South==0.7.6
+distribute==0.6.24
+django-debug-toolbar==0.9.4
+django-extensions==0.9
+django-smuggler==0.3
+reportlab==2.5
